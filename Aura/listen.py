@@ -25,18 +25,3 @@ def take_command():
     except sr.RequestError:
         print("Speech service unavailable. Check your internet.")
         return ""
-
-if __name__ == "__main__":
-    print("AURA is ready! Say 'exit' to quit.")
-
-    while True:
-        command = take_command()
-
-        if command == "":
-            continue
-
-        print("Final command:", command)
-
-        if "exit" in command or "quit" in command:
-            print("Goodbye!")
-            break
