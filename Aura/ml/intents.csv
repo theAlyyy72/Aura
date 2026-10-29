@@ -52,7 +52,6 @@ how do i learn python faster,chat
 how does the internet work,chat
 how far is the moon,chat
 how late is it,time
-how many days are in a leap year,chat
 how much did i spend altogether,total_expenses
 how much have i spent,total_expenses
 i just spent 1000 rupees on groceries,add_expense
@@ -123,6 +122,8 @@ spent 1000 rupees on rent,add_expense
 spent 250 rupees on groceries,add_expense
 spent 250 rupees on lunch,add_expense
 suggest a good book,chat
+suggest a good movie to watch,chat
+suggest a name for my dog,chat
 sum up my expenses,total_expenses
 take a note that email the professor,add_note
 take a note that gym at 7,add_note
@@ -147,6 +148,7 @@ what are my notes,read_notes
 what date is it,date
 what did i ask you to remember,read_notes
 what did i save,read_notes
+what is a good song for a road trip,chat
 what is a good workout routine,chat
 what is aws,chat
 what is my expense total,total_expenses
@@ -157,17 +159,15 @@ what is the capital of france,chat
 what is the current time,time
 what is the date,date
 what is the difference between ai and ml,chat
-what is the meaning of life,chat
 what is the tallest mountain,chat
 what is the time,time
 what is today's date,date
+what music should i listen to whlie studyingrecommend a series to binge this weekend,chat
 what notes do i have,read_notes
-what should i cook for dinner,chat
 what time is it,time
 what's the date,date
 what's up aura,greeting
 which date is it today,date
-who won the world cup in 2018,chat
 why do we dream,chat
 why is the sky blue,chat
 write a short poem about rain,chat

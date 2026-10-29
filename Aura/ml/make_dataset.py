@@ -83,6 +83,9 @@ templates = {
         "what is the tallest mountain",
         "can you explain what a transformer is",
         "how do I get better at maths", "what makes a good resume",
+        "suggest a good movie to watch", "what music should i listen to whlie studying"
+        "recommend a series to binge this weekend", "which movie won best picture last year"
+        "give me a book recommendation", "what is a good song for a road trip"
     ],
 }
 
