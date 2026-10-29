@@ -1,0 +1,175 @@
+text,intent
+1000 rupees went to coffee,add_expense
+150 rupees went to coffee,add_expense
+add 100 to my lunch expenses,add_expense
+add 200 to my groceries expenses,add_expense
+add 250 rupees for rent,add_expense
+add 50 to my groceries expenses,add_expense
+add 500 to my petrol expenses,add_expense
+add a note to book train tickets,add_note
+add a note to buy milk,add_note
+add a note to meeting at 5,add_note
+add a note to water the plants,add_note
+any notes saved,read_notes
+calculate my expenses,total_expenses
+can you open calendar,open_app
+can you open chrome,open_app
+can you open safari,open_app
+can you tell me the date,date
+can you tell me the time,time
+can you tell me what i am,chat
+check the time,time
+current time please,time
+date please,date
+don't let me forget to book train tickets,add_note
+don't let me forget to buy milk,add_note
+don't let me forget to gym at 7,add_note
+don't let me forget to pay electricity bill,add_note
+explain rag in one line,chat
+explain what an api is,chat
+fire up calculator,open_app
+fire up calendar,open_app
+fire up notes,open_app
+fire up safari,open_app
+fire up spotify,open_app
+give me tips for a job interview,chat
+good afternoon,greeting
+good morning,greeting
+hello,greeting
+hello aura,greeting
+hello hello,greeting
+help me plan my day,chat
+hey,greeting
+hey aura,greeting
+hey there,greeting
+hi,greeting
+hi aura,greeting
+hi there,greeting
+how are you feeling today,chat
+how do airplanes fly,chat
+how do i get better at maths,chat
+how do i learn python faster,chat
+how does the internet work,chat
+how far is the moon,chat
+how late is it,time
+how many days are in a leap year,chat
+how much did i spend altogether,total_expenses
+how much have i spent,total_expenses
+i just spent 1000 rupees on groceries,add_expense
+i spent 100 on movie,add_expense
+i spent 500 on movie,add_expense
+keep a note about water the plants,add_note
+launch calculator,open_app
+launch safari,open_app
+launch spotify,open_app
+launch the chrome app for me,open_app
+launch the notes app for me,open_app
+launch the safari app for me,open_app
+list my notes,read_notes
+log 150 rupees movie expense,add_expense
+log 250 rupees rent expense,add_expense
+log 50 rupees coffee expense,add_expense
+make a note to book train tickets,add_note
+namaste,greeting
+note down book train tickets,add_note
+note down email the professor,add_note
+note down water the plants,add_note
+open calculator,open_app
+open calendar,open_app
+open chrome,open_app
+open mail,open_app
+open safari,open_app
+open the calculator app,open_app
+open the mail app,open_app
+open the safari app,open_app
+open the spotify app,open_app
+play back my notes,read_notes
+please open calendar app,open_app
+please open chrome app,open_app
+please open mail app,open_app
+please open spotify app,open_app
+put book train tickets in my notes,add_note
+put call mom in my notes,add_note
+put email the professor in my notes,add_note
+put gym at 7 in my notes,add_note
+put meeting at 5 in my notes,add_note
+put pay electricity bill in my notes,add_note
+put water the plants in my notes,add_note
+read me my notes,read_notes
+read my notes,read_notes
+read out my saved notes,read_notes
+record 150 for groceries,add_expense
+record 150 for travel,add_expense
+record 200 for groceries,add_expense
+record 250 for groceries,add_expense
+remember book train tickets,add_note
+remember buy milk,add_note
+remember gym at 7,add_note
+run calculator,open_app
+run calendar,open_app
+run chrome,open_app
+save a note call mom,add_note
+save an expense of 1000 for travel,add_expense
+save an expense of 150 for coffee,add_expense
+save an expense of 50 for coffee,add_expense
+save an expense of 500 for lunch,add_expense
+save this reminder email the professor,add_note
+show my expense total,total_expenses
+show my notes,read_notes
+spent 1000 rupees on groceries,add_expense
+spent 1000 rupees on movie,add_expense
+spent 1000 rupees on petrol,add_expense
+spent 1000 rupees on rent,add_expense
+spent 250 rupees on groceries,add_expense
+spent 250 rupees on lunch,add_expense
+suggest a good book,chat
+sum up my expenses,total_expenses
+take a note that email the professor,add_note
+take a note that gym at 7,add_note
+take a note that meeting at 5,add_note
+tell me a fun fact about space,chat
+tell me a joke,chat
+tell me a riddle,chat
+tell me my total expenses,total_expenses
+tell me something interesting,chat
+tell me the current date,date
+tell me the date,date
+tell me the time,time
+tell me what time it is now,time
+time now,time
+today's date please,date
+total spending,total_expenses
+track 1000 rupees for travel,add_expense
+track 50 rupees for coffee,add_expense
+track 500 rupees for travel,add_expense
+translate good night into spanish,chat
+what are my notes,read_notes
+what date is it,date
+what did i ask you to remember,read_notes
+what did i save,read_notes
+what is a good workout routine,chat
+what is aws,chat
+what is my expense total,total_expenses
+what is my total expense,total_expenses
+what is my total spending,total_expenses
+what is overfitting,chat
+what is the capital of france,chat
+what is the current time,time
+what is the date,date
+what is the difference between ai and ml,chat
+what is the meaning of life,chat
+what is the tallest mountain,chat
+what is the time,time
+what is today's date,date
+what notes do i have,read_notes
+what should i cook for dinner,chat
+what time is it,time
+what's the date,date
+what's up aura,greeting
+which date is it today,date
+who won the world cup in 2018,chat
+why do we dream,chat
+why is the sky blue,chat
+write a short poem about rain,chat
+write down buy milk,add_note
+write down call mom,add_note
