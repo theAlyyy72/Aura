@@ -1,12 +1,34 @@
 # AURA: Voice AI Assistant
 
-AURA listens to your voice, understands the command, and replies by speech.
+AURA understands your commands by voice or text. Simple commands (notes, expenses, time, date, open apps) are handled by a trained ML model. Open-ended questions go to an OpenAI model with function calling.
 
-## How it works
+## Architecture
 
-Mic, speech-to-text, intent classifier (scikit-learn), then either local tools (notes, expenses, time, date, open apps) or an OpenAI model with function calling, and finally text-to-speech.
+Voice or text, then intent classifier (scikit-learn), then local tools or LLM, then reply.
 
-Simple commands are handled locally by a trained ML model (fast and free). Open-ended conversation goes to the LLM, which can call the same tools.
+- `Aura/ml/`: intent classifier (dataset, training, evaluation)
+- `Aura/router.py`: routes a command to a tool or the LLM
+- `Aura/tools.py`: notes, expenses, open apps
+- `Aura/brain.py`: OpenAI function calling
+- `Aura/api.py`: FastAPI service (`POST /chat`, `GET /health`)
+- `Aura/frontend/`: React UI
+- `Aura/main.py`: voice assistant for the terminal (microphone and speaker)
+
+## Run with Docker
+
+Create `Aura/.env` with `OPENAI_API_KEY=your_key`, then:
+
+```
+docker compose up --build
+```
+
+Open http://localhost:3000 (UI) or http://localhost:8000/docs (API).
+
+```
+curl -X POST http://localhost:8000/chat \
+  -H "Content-Type: application/json" \
+  -d '{"text": "what is my total expense"}'
+```
 
 ## Intent classifier
 
@@ -26,10 +48,15 @@ Approximate 95% confidence interval for the final number: 83% to 99% (small test
 - Training data is synthetic. Real speech is noisier.
 - Google speech recognition sometimes mishears commands ("add" becomes "at").
 - The test set was written by the same author as the training templates, so real-world accuracy is likely lower.
+- LLM function calling is implemented but has had limited testing.
+- The API has no authentication yet and must not be exposed publicly as is.
 
 ## Roadmap
 
-- [ ] FastAPI service
-- [ ] Docker
+- [x] Voice assistant (speech in, speech out)
+- [x] Intent classifier with held-out evaluation
+- [x] FastAPI service
+- [x] Docker and docker-compose
+- [x] React frontend
 - [ ] AWS deployment
 - [ ] Whisper speech-to-text
