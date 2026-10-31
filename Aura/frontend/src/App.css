@@ -467,6 +467,7 @@ button { cursor: pointer; }
   margin: 8px 0;
   background: linear-gradient(90deg, #d7baff, #728aff);
   -webkit-background-clip: text;
+  background-clip: text;
   color: transparent;
 }
 
@@ -741,3 +742,4 @@ button { cursor: pointer; }
   .bottom-note { font-size: 7px; }
   .chat-page { padding: 17px; }
 }
+.online-dot.off {background: #ff5d5d; box-shadow: 0 0 12px #ff5d5d; }

@@ -1,8 +1,9 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
+
 import {
   Home, MessageSquare, Mic, Wrench, Settings,
   Palette, LayoutDashboard, Sparkles, Send,
-  Volume2, Activity, Cpu, Zap, Clock, Menu
+ Activity, Cpu, Zap, Menu
 } from "lucide-react";
 import "./App.css";
 
@@ -52,6 +53,14 @@ function App() {
   const [listening, setListening] = useState(false);
   const [loading, setLoading] = useState(false);
   const [accent, setAccent] = useState("#a855f7");
+  
+  const [online, setOnline] = useState(false);
+
+useEffect(() => {
+  fetch(`${API}/health`)
+    .then(r => setOnline(r.ok))
+    .catch(() => setOnline(false));
+}, []);
 
   const sendMessage = async (text = message) => {
     if (!text.trim() || loading) return;
@@ -99,9 +108,8 @@ function App() {
     }
 
     const recognition = new SpeechRecognition();
-    recognition.lang = "en-US";
+    recognition.lang = "en-IN";
     recognition.interimResults = false;
-
     recognition.onstart = () => setListening(true);
     recognition.onend = () => setListening(false);
 
@@ -151,8 +159,8 @@ function App() {
 
         <div className="sidebar-bottom">
           <div className="system-mini">
-            <span className="online-dot" />
-            <span>All systems online</span>
+            <span className={`online-dot ${online ? "" : "off"}`} />
+            <span>{online ? "All systems online" : "Backend offline"}</span>
           </div>
           <button className="nav-item" onClick={() => setPage("Settings")}>
             <Palette size={19} />
@@ -171,7 +179,7 @@ function App() {
             </div>
           </div>
           <div className="top-right">
-            <span className="status"><span className="online-dot" /> ONLINE</span>
+         <span className="status"><span className={`online-dot ${online ? "" : "off"}`} /> {online ? "ONLINE" : "OFFLINE"}</span>
             <div className="avatar">A</div>
           </div>
         </header>
@@ -320,7 +328,7 @@ function App() {
               <h1>Your <span className="gradient-text">Dashboard.</span></h1>
             </div>
             <div className="stats-grid">
-              <Stat icon={Activity} title="AI Status" value="ONLINE" />
+              <Stat icon={Activity} title="AI Status" value={online ? "ONLINE" : "OFFLINE"} />
               <Stat icon={MessageSquare} title="Conversations" value={messages.length.toString()} />
               <Stat icon={Cpu} title="Core Engine" value="ACTIVE" />
               <Stat icon={Zap} title="Response Mode" value="READY" />
@@ -344,11 +352,16 @@ function App() {
               <h1>Smart <span className="gradient-text">Tools.</span></h1>
             </div>
             <div className="feature-grid tools-grid">
-              {["Web Search", "App Control", "File Assistant", "System Commands"].map((tool, i) => (
+              {[
+  ["Notes", "Save and read quick notes"],
+  ["Expenses", "Track what you spend"],
+  ["Open Apps", "Launch apps on your Mac"],
+  ["Time & Date", "Ask for the time or date"],
+].map(([tool, desc], i) => (
                 <div className="glass-card tool-card" key={tool}>
                   <Wrench />
                   <h3>{tool}</h3>
-                  <p className="muted">Connect your AURA tools and capabilities.</p>
+                  <p className="muted">{desc}</p>
                   <span className="live-tag">TOOL {i + 1}</span>
                 </div>
               ))}
