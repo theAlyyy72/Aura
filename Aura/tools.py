@@ -1,4 +1,5 @@
 import subprocess
+import sys 
 from datetime import datetime
 from pathlib import Path
 
@@ -40,7 +41,9 @@ def total_expenses():
 
 
 def open_app(name):
-    result = subprocess.run(["open", "-a", name], capture_output=True)
+    if sys.platform != "darwin":
+        return "I can only open apps when i run on a mac."
+    result = subprocess.run(["open","a", name], capture_output=True)
     if result.returncode == 0:
-        return f"Opening {name}."
+        return f"Opened {name}."
     return f"I could not find an app called {name}."
