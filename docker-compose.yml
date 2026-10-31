@@ -1,0 +1,25 @@
+services:
+  api:
+    build: ./Aura
+    ports:
+      - "8000:8000"
+    env_file:
+      - ./Aura/.env
+    volumes:
+      - aura-data:/app/data
+    restart: unless-stopped
+
+  frontend:
+    build:
+      context: ./Aura/frontend
+      args:
+        VITE_API_URL: http://127.0.0.1:8000
+    ports:
+      - "3000:80"
+    depends_on:
+      api:
+        condition: service_healthy
+    restart: unless-stopped
+
+volumes:
+  aura-data:
