@@ -48,7 +48,7 @@ Approximate 95% confidence interval for the final number: 83% to 99% (small test
 - Training data is synthetic. Real speech is noisier.
 - Google speech recognition sometimes mishears commands ("add" becomes "at").
 - The test set was written by the same author as the training templates, so real-world accuracy is likely lower.
-- LLM function calling is implemented but has had limited testing.
+- LLM function calling was tested manually through the API (saving and reading notes). There are no automated tests yet.
 - The API has no authentication yet and must not be exposed publicly as is.
 
 ## Roadmap
