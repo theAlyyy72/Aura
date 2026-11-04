@@ -2,6 +2,9 @@
 
 AURA understands your commands by voice or text. Simple commands (notes, expenses, time, date, open apps) are handled by a trained ML model. Open-ended questions go to an OpenAI model with function calling.
 
+**Live UI preview:** https://thealyyy72.github.io/Aura/
+(UI only. The backend runs locally with Docker, so chat is offline on this page.)
+
 ## Architecture
 
 Voice or text, then intent classifier (scikit-learn), then local tools or LLM, then reply.
