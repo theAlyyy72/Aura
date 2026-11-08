@@ -71,4 +71,10 @@ Known limits: no HTTPS yet (so the browser microphone button does not work on th
 - [x] Docker and docker-compose
 - [x] React frontend
 - [x] AWS deployment(EC2, Docker Compose, nginx)
-- [ ] Whisper speech-to-text
+
+## Future work
+
+- HTTPS and a domain (needed for the browser microphone on the deployed app)
+- API authentication
+- Automated tests
+- Whisper speech-to-text for the terminal assistant
