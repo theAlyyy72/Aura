@@ -54,6 +54,15 @@ Approximate 95% confidence interval for the final number: 83% to 99% (small test
 - LLM function calling was tested manually through the API (saving and reading notes). There are no automated tests yet.
 - The API has no authentication yet and must not be exposed publicly as is.
 
+## Deployment (AWS)
+
+Deployed on an AWS EC2 instance (Amazon Linux 2023) with Docker Compose. nginx is the only public port (80): it serves the React build and proxies `/api` to the FastAPI container, with a rate limit of 10 requests per minute per IP to protect the LLM budget.
+
+Same setup locally: `docker compose -f docker-compose.prod.yml up --build`
+
+Known limits: no HTTPS yet (so the browser microphone button does not work on the EC2 URL), no user authentication, single instance. 
+
+
 ## Roadmap
 
 - [x] Voice assistant (speech in, speech out)
@@ -61,5 +70,5 @@ Approximate 95% confidence interval for the final number: 83% to 99% (small test
 - [x] FastAPI service
 - [x] Docker and docker-compose
 - [x] React frontend
-- [ ] AWS deployment
+- [x] AWS deployment(EC2, Docker Compose, nginx)
 - [ ] Whisper speech-to-text
